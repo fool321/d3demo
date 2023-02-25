@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://kit.fontawesome.com/04cce5d881.js" crossorigin="anonymous"></script>
+  <title>D3js visualization</title>
+</head>
+<style>
+  .axis path,
+  .axis line {
+    stroke-width: 1;
+    fill: none;
+  }
+
+  path {
+    fill: none;
+    stroke-width: 1.5;
+    clip-path: url(#clip);
+  }
+
+  div.tooltip {
+    position: absolute;
+    text-align: center;
+    padding: 5px;
+    font: 12px sans-serif;
+    background: rgb(181, 44, 44);
+    color: white;
+    border: 1px;
+    border-radius: 4px;
+    pointer-events: none;
+  }
+
+  button {
+    position: relative;
+    top: 20px;
+    left: 180px;
+  }
+</style>
+
+<svg width="960" height="500"></svg>
+
+<div style="height: 45%;">
+    <script src="app1.js"></script>
+</div>
+
+<div style="height: 45%;">
+    <script src="app2.js"></script>  
+</div>
+
+<div style="margin-top: 20px, text-align: center">
+    <button class = "fa-solid fa-rectangle" onclick="addNational()">Add EU_27</button>
+    <button class = "fa-solid fa-rectangle" onclick="addAll()">Add All</button>
+    <button class = "fa-solid fa-rectangle" onclick="clearAll()">Clear All</button>
+    <button class = "fa-solid fa-rectangle" onclick="addBelow()">Country below EU_27 2013</button>
+    <button class = "fa-solid fa-rectangle" onclick="addBelow_new()">Country below EU_27 2020</button>
+
+
+</div>
+
+</html>
